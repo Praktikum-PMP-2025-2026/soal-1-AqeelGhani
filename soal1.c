@@ -10,6 +10,7 @@
 
  #include <stdio.h>
  #include <stdlib.h>
+ #include <math.h>
  
  int MAX_SUM(int *Arr, int N){ // Fungsi mencari max sum
     int sum=0, negativeAll=1;
@@ -46,7 +47,7 @@
                     break;
                 }
             }
-            if (kiri!=-1 && kanan!=-1) Arr[i] = (kiri+kanan)/2;
+            if (kiri!=-1 && kanan!=-1) Arr[i] = floor((kiri+kanan)/2.0);
             else if (kiri!=-1) Arr[i] = kiri;
             else if (kanan!=-1) Arr[i] = kanan;
             else Arr[i] = 0;
